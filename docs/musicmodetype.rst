@@ -1,0 +1,3 @@
+.. _musicmodetype:
+
+TODO

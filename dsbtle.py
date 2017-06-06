@@ -280,7 +280,7 @@ class DreamScreen:
 		DBG('GetBrightness')
 		return self._readCommandNWait(Command.BRIGHTNESS, timeout)
 		
-	def SetZone(self, top=True, bottom=True, left=True, right=True, timeout=WRITE_TIMEOUT):
+	def SetZone(self, top, bottom, left, right, timeout=WRITE_TIMEOUT):
 		assert isinstance(top, bool), 'top must be bool: %r' % top
 		assert isinstance(bottom, bool), 'bottom must be bool: %r' % bottom
 		assert isinstance(left, bool), 'left must be bool: %r' % left
@@ -293,7 +293,6 @@ class DreamScreen:
 		return self._readCommandNWait(Command.ZONE, timeout)
 		
 	def SetAmblientColor(self, red, green, blue, timeout=WRITE_TIMEOUT):
-		# FIXME Change mode to AMBIENT_STATIC
 		assert (isinstance(red, int) and (red >= 0) and (red <= 255)), 'red must be int between 0 and 255: %r' % red
 		assert (isinstance(green, int) and (green >= 0) and (green <= 255)), 'green must be int between 0 and 255: %r' % green
 		assert (isinstance(blue, int) and (blue >= 0) and (blue <= 255)), 'blue must be int between 0 and 255: %r' % blue
@@ -336,7 +335,6 @@ class DreamScreen:
 		return self._readCommandNWait(Command.CUSTOM_LED_COUNT, timeout)
 		
 	def SetMusicModeType(self, musicModeType, timeout=WRITE_TIMEOUT):
-		# FIXME Change mode to MUSIC
 		assert isinstance(musicModeType, MusicModeType), 'musicModeType must be MusicModeType: %r' % musicModeType
 		DBG('SetMusicModeType(%d)' % musicModeType.value)
 		return self._writeCommandNWait(Command.MUSIC_MODE_TYPE, '%d' % musicModeType.value, timeout)
@@ -368,7 +366,6 @@ class DreamScreen:
 		return self._readCommandNWait(Command.VIDEO_MINIMUM_INTENSITY, timeout)
 		
 	def SetAmbientShowType(self, ambientShowType, timeout=WRITE_TIMEOUT):
-		# FIXME Change mode to AMBIENT_SHOW
 		assert isinstance(ambientShowType, AmbientShowType), 'ambientShowType must be AmbientShowType: %r' % ambientShowType
 		DBG('SetAmbientShowType(%d)' % ambientShowType.value)
 		return self._writeCommandNWait(Command.AMBIENT_SHOW_TYPE, '%d' % ambientShowType.value, timeout)
