@@ -9,7 +9,7 @@ I've mostly developed it using a Raspberry Pi, but it will also run on x86 Debia
 
 The code is developed and tested on Python 3.4 only.
 
-The code is based on official DreamScreen BLE commands documentation and answers of 
+The code is based on official DreamScreen BLE commands documentation (http://dreamscreen.boards.net/thread/22/dreamscreen-ble-command-set) and answers of 
 DreamScreen developers (thanks, Kyle).
 
 Requirements
@@ -47,5 +47,4 @@ Documentation can be built from the sources in the docs/ directory using Sphinx.
 TO DO List
 ----------
 
-- Documentation
 - Python 2.7 compatible
