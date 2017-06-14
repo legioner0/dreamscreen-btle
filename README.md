@@ -7,7 +7,7 @@ This is a project to provide an API to control DreamScreen (http://www.dreamscre
 via Bluetooth Low Energy from Python. At present it runs on Linux only; 
 I've mostly developed it using a Raspberry Pi, but it will also run on x86 Debian Linux.
 
-The code is developed and tested on Python 3.4 only.
+The code is tested on Python 2.7 and 3.4; it should also work on 3.3.
 
 The code is based on official DreamScreen BLE commands documentation (http://dreamscreen.boards.net/thread/22/dreamscreen-ble-command-set) and answers of 
 DreamScreen developers (thanks, Kyle).
@@ -17,14 +17,14 @@ Requirements
 
 This module require bluepy and parse packages from pip for work:
 
-	$ sudo pip3 install bluepy
-	$ sudo pip3 install parse
+	$ sudo pip install bluepy
+	$ sudo pip install parse
 
 
 Demo mode
 ---------
 
-	$ sudo python3 dsbtle.py
+	$ sudo python dsbtle.py
 
 Will scan for DreamScreen devices and show all avialable information.
 
@@ -47,4 +47,4 @@ Documentation can be built from the sources in the docs/ directory using Sphinx.
 TO DO List
 ----------
 
-- Python 2.7 compatible
+- Find new TODO List items

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 ''' DreamScreen interface via BLE '''
 import sys
@@ -250,7 +250,7 @@ class DreamScreen:
 		assert isinstance(direction, CommandDirection), 'direction must be CommandDirection: %r' % direction
 		assert isinstance(argument, str), 'argument must be string: %r' % argument
 		DBG('_transmitCommand(%s, %s, %s)' % (command.value, direction.value, argument))
-		self.ds_command_char.write(bytes('%s%s%s%s' % (COMMAND_CHAR, command.value, direction.value, argument), 'UTF-8'))
+		self.ds_command_char.write(('%s%s%s%s' % (COMMAND_CHAR, command.value, direction.value, argument)).encode('UTF-8'))
 		return self
 
 	def _writeCommandNWait(self, command, argument, timeout=WRITE_TIMEOUT):
@@ -401,7 +401,7 @@ class DreamScreen:
 	def SetName(self, name):
 		assert isinstance(name, str), 'name must be string: %r' % name
 		DBG('SetName(%s)' % name)
-		return self.ds_name_char.write(bytes('%s' % name, 'UTF-8'))
+		return self.ds_name_char.write(('%s' % name).encode('UTF-8'))
 
 	def GetName(self):
 		DBG('GetName')
