@@ -91,7 +91,7 @@ Instance Methods
 
    Send command to set *music mode type* (item of :ref:`musicmodetype`). Return self.
 
-   **Warning!** Setting ambient color change mode to ``MUSIC`` immediately.
+   **Warning!** Setting music mode type change mode to ``MUSIC`` immediately.
 
 .. function:: GetMusicModeType([timeout=READ_TIMEOUT])
 
