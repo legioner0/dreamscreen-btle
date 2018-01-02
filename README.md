@@ -20,6 +20,12 @@ This module require bluepy and parse packages from pip for work:
 	$ sudo pip install bluepy
 	$ sudo pip install parse
 
+To install the source and build locally:
+
+    $ git clone https://github.com/legioner0/dreamscreen-btle.git
+    $ cd dreamscreen-btle
+    $ python setup.py build
+    $ sudo python setup.py install
 
 Demo mode
 ---------
